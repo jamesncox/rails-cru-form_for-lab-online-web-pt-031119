@@ -13,7 +13,7 @@ class ArtistsController < ApplicationController
   end 
   
   def create
-    @artist = Artist.new
+    @artist = Artist.new(artist_params)
     @artist.find
   end 
   
@@ -22,5 +22,11 @@ class ArtistsController < ApplicationController
   
   def update 
   end 
+  
+  private 
+    
+    def artist_params
+      @artist.permit
+    end 
   
 end

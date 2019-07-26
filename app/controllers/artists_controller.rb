@@ -26,7 +26,7 @@ class ArtistsController < ApplicationController
   private 
     
     def artist_params
-      @artist.require(permit
+      @artist.require(:artist)permit
     end 
   
 end

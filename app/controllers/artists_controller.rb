@@ -9,9 +9,12 @@ class ArtistsController < ApplicationController
   end 
   
   def new 
+    @artist = Artist.new 
   end 
   
-  def create 
+  def create
+    @artist = Artist.new
+    @artist.find
   end 
   
   def edit 

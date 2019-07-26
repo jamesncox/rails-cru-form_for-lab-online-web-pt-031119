@@ -26,4 +26,10 @@ class GenresController < ApplicationController
     @genre = Genre.update(genre_params)
     redirect_to genre_path(@genre)
   end 
+  
+  private 
+  
+    def genre_params 
+      @genre.require(:genre).permit(:name)
+    end 
 end

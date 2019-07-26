@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   
   def index
+    @artists = Arist.all 
   end 
   
   def show 
